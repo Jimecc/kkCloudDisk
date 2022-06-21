@@ -13,9 +13,16 @@
       <img src="../../../assets/aside2/sounds2.png" class="buttonAside2" v-if="buttons.sounds">
       <img src="../../../assets/aside2/others1.png" class="buttonAside2" v-if="!buttons.others" @click="clickOthers">
       <img src="../../../assets/aside2/others2.png" class="buttonAside2" v-if="buttons.others">
+      <el-divider style="margin-left: 0px"></el-divider>
       <img src="../../../assets/aside2/bin1.png" class="buttonAside2" v-if="!buttons.bin" @click="clickBin">
       <img src="../../../assets/aside2/bin2.png" class="buttonAside2" v-if="buttons.bin">
+
     </div>
+<!--    <div style="margin-top: 330%" class="divCapacity">-->
+<!--      <span style="margin-left: 12px">容量：</span>-->
+<!--      <el-progress :percentage="capacity" class="buttonAside2"></el-progress>-->
+<!--    </div>-->
+
 
   </div>
 </template>
@@ -34,7 +41,7 @@
           others  :false,
           bin     :false
         },
-        showDocs: true
+       capacity:57.23
       }
     },
     methods:{
@@ -102,5 +109,12 @@
   border-radius: 25px;
 
 
+}
+
+.divCapacity{
+  background: #fff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 0 50px #e3e3e3;
+  border-radius: 10px;
 }
 </style>
