@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <el-form ref="form" :model="loginForm" class="loginContainer">
       <font color="darkgray" size="2px">欢迎使用&nbsp;<el-button type="text" @click="openPage"
@@ -53,7 +54,7 @@ export default {
   },
   methods: {
     openPage() {
-      window.open('https://www.baidu.com');
+      window.open('https://github.com/Jimecc/kkCloudDisk');
     },
     submitForm() {
       this.$router.push('/home');
@@ -70,7 +71,9 @@ export default {
 </script>
 
 <style scoped>
-
+.elHeader{
+  background: dodgerblue;
+}
 .submitButton {
   width: 100%;
   /*margin-top: 10px;*/

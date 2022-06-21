@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header">
+    <div class="divtop">
       <img src="../../assets/kkcd.png" class="imgLogo">
     </div>
     <div class="forgotCard">

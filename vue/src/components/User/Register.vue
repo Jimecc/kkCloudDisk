@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="header">
+    <div class="divTop">
       <img src="../../assets/kkcd.png" class="imgLogo">
     </div>
     <div class="divAvatar">
-      <img class="avatar" src="https://files.catbox.moe/3wapon.jpeg">
+      <img class="imgAvatar" src="https://files.catbox.moe/3wapon.jpeg">
     </div>
 
     <div class="divForm">
@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       registerForm: {
-        nicknam: '',
+        nickname: '',
         username: '',
         password: '',
         confirmPassword: '',
@@ -67,7 +67,7 @@ export default {
   box-shadow: 0 0 25px #e2e2e2;
 }
 
-.avatar {
+.imgAvatar {
   width: 100px;
   background: #fff;
   border-radius: 100px;
@@ -85,7 +85,7 @@ export default {
   margin-left: 10px;
 }
 
-.header {
+.divTop {
   display: flex;
 }
 
