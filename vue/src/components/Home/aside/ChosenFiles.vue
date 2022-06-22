@@ -1,21 +1,21 @@
 <template>
   <div>
     <div class="buttonAside2">
-      <img src="../../../assets/aside2/allFiles1.png" class="buttonAside2" v-if="!buttons.allFiles" @click="clickAll" style="margin-top: 20px">
-      <img src="../../../assets/aside2/allFiles2.png" class="buttonAside2" v-if="buttons.allFiles" style="margin-top: 20px">
-      <img src="../../../assets/aside2/docs1.png" class="buttonAside2" v-if="!buttons.docs" @click="clickDocs">
-      <img src="../../../assets/aside2/docs2.png" class="buttonAside2" v-if="buttons.docs">
-      <img src="../../../assets/aside2/imgs1.png" class="buttonAside2" v-if="!buttons.imgs" @click="clickImgs">
-      <img src="../../../assets/aside2/imgs2.png" class="buttonAside2" v-if="buttons.imgs">
-      <img src="../../../assets/aside2/videos1.png" class="buttonAside2" v-if="!buttons.videos" @click="clickVideos">
-      <img src="../../../assets/aside2/videos2.png" class="buttonAside2" v-if="buttons.videos">
-      <img src="../../../assets/aside2/sounds1.png" class="buttonAside2" v-if="!buttons.sounds" @click="clickSounds">
-      <img src="../../../assets/aside2/sounds2.png" class="buttonAside2" v-if="buttons.sounds">
-      <img src="../../../assets/aside2/others1.png" class="buttonAside2" v-if="!buttons.others" @click="clickOthers">
-      <img src="../../../assets/aside2/others2.png" class="buttonAside2" v-if="buttons.others">
+      <img src="../../../assets/aside2/menu1/allFiles1.png" class="buttonAside2" v-if="!buttons.allFiles" @click="clickAll" style="margin-top: 20px">
+      <img src="../../../assets/aside2/menu1/allFiles2.png" class="buttonAside2" v-if="buttons.allFiles" style="margin-top: 20px">
+      <img src="../../../assets/aside2/menu1/docs1.png" class="buttonAside2" v-if="!buttons.docs" @click="clickDocs">
+      <img src="../../../assets/aside2/menu1/docs2.png" class="buttonAside2" v-if="buttons.docs">
+      <img src="../../../assets/aside2/menu1/imgs1.png" class="buttonAside2" v-if="!buttons.imgs" @click="clickImgs">
+      <img src="../../../assets/aside2/menu1/imgs2.png" class="buttonAside2" v-if="buttons.imgs">
+      <img src="../../../assets/aside2/menu1/videos1.png" class="buttonAside2" v-if="!buttons.videos" @click="clickVideos">
+      <img src="../../../assets/aside2/menu1/videos2.png" class="buttonAside2" v-if="buttons.videos">
+      <img src="../../../assets/aside2/menu1/sounds1.png" class="buttonAside2" v-if="!buttons.sounds" @click="clickSounds">
+      <img src="../../../assets/aside2/menu1/sounds2.png" class="buttonAside2" v-if="buttons.sounds">
+      <img src="../../../assets/aside2/menu1/others1.png" class="buttonAside2" v-if="!buttons.others" @click="clickOthers">
+      <img src="../../../assets/aside2/menu1/others2.png" class="buttonAside2" v-if="buttons.others">
       <el-divider style="margin-left: 0px"></el-divider>
-      <img src="../../../assets/aside2/bin1.png" class="buttonAside2" v-if="!buttons.bin" @click="clickBin">
-      <img src="../../../assets/aside2/bin2.png" class="buttonAside2" v-if="buttons.bin">
+      <img src="../../../assets/aside2/menu1/bin1.png" class="buttonAside2" v-if="!buttons.bin" @click="clickBin">
+      <img src="../../../assets/aside2/menu1/bin2.png" class="buttonAside2" v-if="buttons.bin">
 
     </div>
 <!--    <div style="margin-top: 330%" class="divCapacity">-->

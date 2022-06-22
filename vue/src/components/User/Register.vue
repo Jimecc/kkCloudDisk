@@ -75,6 +75,9 @@ export default {
   padding: 5px 5px 5px 5px;
   box-shadow: 0 0 25px #e2e2e2;
 }
+.placeAvatar{
+
+}
 
 .inputCode {
   width: 200px;

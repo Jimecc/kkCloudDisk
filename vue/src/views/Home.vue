@@ -5,8 +5,32 @@
 
       <el-header class="elHeader">
         <img src="../assets/logoWord.png" class="imgLogo">
-        <img src="../assets/avatar.jpeg"  class="imgAvatar">
-        <span  class="headerUserInfoUsername">欢迎您，{{userinfo.username}}</span>
+        <el-popover class="placeAvatar"
+            placement="bottom"
+            width="150"
+            trigger="click"
+            v-model="vis">
+          <img src="../assets/avatar.jpeg"  slot="reference" class="imgAvatar" >
+          <div style="text-align: left;margin-top: 12px">
+            <div style="text-align: center">
+              <h3>{{userinfo.nickname}}</h3>
+            </div>
+            <el-divider style="padding: 0px 0px"></el-divider>
+            <div>
+              <el-button type="text">个人中心</el-button>
+            </div>
+            <div>
+              <el-button type="text">修改密码</el-button>
+            </div>
+            <div>
+              <el-button type="text">退出登录</el-button>
+            </div>
+            <div>
+              <el-button type="text">设置</el-button>
+            </div>
+          </div>
+        </el-popover>
+        <span  class="headerUserInfoUsername">{{userinfo.nickname}}</span>
         <el-divider direction="vertical"></el-divider>
         <el-button style="font-size: 16px;color:gray;font-weight: bold;margin-left: 10px" type="text" icon="el-icon-sort"></el-button>
         <el-button style="font-size: 16px;color:gray;font-weight: bold;margin-left: 15px" type="text" icon="el-icon-chat-dot-round"></el-button>
@@ -34,24 +58,27 @@
         <el-container>
           <el-aside width="220px" class="elAside2">
             <div v-if="button1Aside1" class="buttonAside2">
-              <img src="../assets/aside2/allFiles1.png" class="buttonAside2" v-if="!buttons.allFiles" @click="clickAll" style="margin-top: 20px">
-              <img src="../assets/aside2/allFiles2.png" class="buttonAside2" v-if="buttons.allFiles" style="margin-top: 20px">
-              <img src="../assets/aside2/docs1.png" class="buttonAside2" v-if="!buttons.docs" @click="clickDocs">
-              <img src="../assets/aside2/docs2.png" class="buttonAside2" v-if="buttons.docs">
-              <img src="../assets/aside2/imgs1.png" class="buttonAside2" v-if="!buttons.imgs" @click="clickImgs">
-              <img src="../assets/aside2/imgs2.png" class="buttonAside2" v-if="buttons.imgs">
-              <img src="../assets/aside2/videos1.png" class="buttonAside2" v-if="!buttons.videos" @click="clickVideos">
-              <img src="../assets/aside2/videos2.png" class="buttonAside2" v-if="buttons.videos">
-              <img src="../assets/aside2/sounds1.png" class="buttonAside2" v-if="!buttons.sounds" @click="clickSounds">
-              <img src="../assets/aside2/sounds2.png" class="buttonAside2" v-if="buttons.sounds">
-              <img src="../assets/aside2/others1.png" class="buttonAside2" v-if="!buttons.others" @click="clickOthers">
-              <img src="../assets/aside2/others2.png" class="buttonAside2" v-if="buttons.others">
+              <img src="../assets/aside2/menu1/allFiles1.png" class="buttonAside2" v-if="!buttons.allFiles" @click="clickAll" style="margin-top: 20px">
+              <img src="../assets/aside2/menu1/allFiles2.png" class="buttonAside2" v-if="buttons.allFiles" style="margin-top: 20px">
+              <img src="../assets/aside2/menu1/docs1.png" class="buttonAside2" v-if="!buttons.docs" @click="clickDocs">
+              <img src="../assets/aside2/menu1/docs2.png" class="buttonAside2" v-if="buttons.docs">
+              <img src="../assets/aside2/menu1/imgs1.png" class="buttonAside2" v-if="!buttons.imgs" @click="clickImgs">
+              <img src="../assets/aside2/menu1/imgs2.png" class="buttonAside2" v-if="buttons.imgs">
+              <img src="../assets/aside2/menu1/videos1.png" class="buttonAside2" v-if="!buttons.videos" @click="clickVideos">
+              <img src="../assets/aside2/menu1/videos2.png" class="buttonAside2" v-if="buttons.videos">
+              <img src="../assets/aside2/menu1/sounds1.png" class="buttonAside2" v-if="!buttons.sounds" @click="clickSounds">
+              <img src="../assets/aside2/menu1/sounds2.png" class="buttonAside2" v-if="buttons.sounds">
+              <img src="../assets/aside2/menu1/others1.png" class="buttonAside2" v-if="!buttons.others" @click="clickOthers">
+              <img src="../assets/aside2/menu1/others2.png" class="buttonAside2" v-if="buttons.others">
               <el-divider style="margin-left: 0px"></el-divider>
-              <img src="../assets/aside2/bin1.png" class="buttonAside2" v-if="!buttons.bin" @click="clickBin">
-              <img src="../assets/aside2/bin2.png" class="buttonAside2" v-if="buttons.bin">
+              <img src="../assets/aside2/menu1/bin1.png" class="buttonAside2" v-if="!buttons.bin" @click="clickBin">
+              <img src="../assets/aside2/menu1/bin2.png" class="buttonAside2" v-if="buttons.bin">
             </div>
 <!--            <ChosenFiles  v-show="button1Aside1"/>-->
-            <ChosenTr     v-show="button2Aside1"/>
+<!--            <ChosenTr     v-show="button2Aside1"/>-->
+            <div v-show="button2Aside1">
+              <img src="../assets/aside2/menu2/recentlyShare.png" class="buttonAside2" style="margin-top: 20px">
+            </div>
             <ChosenUser   v-show="button3Aside1"/>
 <!--            <div style="margin-top: 330%" class="divCapacity">-->
 <!--              <span style="margin-left: 12px">容量：</span>-->
@@ -105,9 +132,11 @@ import RecentlyShare from "../components/Home/main/chosenTr/RecentlyShare";
           others  :false,
           bin     :false
         },
+        vis:false,
         capacity:57.23,
         userinfo:{
-          username:'管理员'
+          nickname:'无恶不作的张三',
+          username:'123'
         },
         button1Aside1: true,
         button2Aside1: false,
@@ -208,9 +237,12 @@ import RecentlyShare from "../components/Home/main/chosenTr/RecentlyShare";
 }
 .imgAvatar{
   width: 30px;
-  border-radius: 40px;
+  border-radius: 80px;
   padding: 1px;
   border: 1px solid #1e90ff;
+
+}
+.placeAvatar{
   margin-left: 76%;
 }
 .headerUserInfoUsername{
