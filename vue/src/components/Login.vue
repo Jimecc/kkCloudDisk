@@ -71,9 +71,6 @@ export default {
 </script>
 
 <style scoped>
-.elHeader{
-  background: dodgerblue;
-}
 .submitButton {
   width: 100%;
   /*margin-top: 10px;*/

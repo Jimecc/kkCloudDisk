@@ -1,6 +1,7 @@
 <template>
 
   <div>
+    <!-- 面包屑 -->
     <div>
       <div class="divButtonUpload">
         <el-button type="primary" round size="small"  class="buttonUpload"><i class="el-icon-upload" style="font-size: 16px;padding: 2px"></i>&emsp;上传文件&emsp;</el-button>
@@ -21,23 +22,27 @@
     </div>
 
 
-
-
-
     <div style="display: flex;width:100%">
 
-      <div style="width: 100%">
+      <div style="width: 100%;background: #666666">
         <div class="divFiles" >
-          <div class="divIconFile"  v-for="i in 20" :key="i">
-            <el-card class="elCardFile" shadow="hover">
-              <img class="imgFile" src="../../../assets/fileIcons/yellowfile.png">
-              <el-button type="text" class="buttonFileName">{{i*100000}}</el-button>
-              <div class="fileInfo">
-                <span>id:{{i}}</span><br>
-                <span>{{ currentDay }}</span>
-              </div>
-            </el-card>
+          <div style="height: 800px">
+            <div>
+              <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto">
+                <li v-for="i in count" class="infinite-list-item">{{ i }}</li>
+              </ul>
+            </div>
           </div>
+<!--          <div class="divIconFile"  v-for="i in 20" :key="i">-->
+<!--            <el-card class="elCardFile" shadow="hover">-->
+<!--              <img class="imgFile" src="../../../assets/fileIcons/yellowfile.png">-->
+<!--              <el-button type="text" class="buttonFileName">{{i*100000}}</el-button>-->
+<!--              <div class="fileInfo">-->
+<!--                <span>id:{{i}}</span><br>-->
+<!--                <span>{{ currentDay }}</span>-->
+<!--              </div>-->
+<!--            </el-card>-->
+<!--          </div>-->
         </div>
       </div>
       <div class="fileBriefIntro">
@@ -54,9 +59,19 @@
 </template>
 
 <script>
-export default {
-name: ""
-}
+  export default {
+    name: "FilesAll",
+    data(){
+      return{
+        count:0
+        }
+      },
+    methods: {
+      load() {
+        this.count += 2
+      }
+    }
+  }
 </script>
 
 <style scoped>
@@ -110,9 +125,6 @@ buttonUpload{
 }
 .imgFile{
   width: 75px;
-}
-.spanFileName{
-  margin-top: -5px;
 }
 .elCardFile{
   width: 160px;

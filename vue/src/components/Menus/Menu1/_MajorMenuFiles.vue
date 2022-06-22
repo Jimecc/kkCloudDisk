@@ -33,8 +33,8 @@
       <el-main class="elMain">
         <!-- 以下 Div 目前仅用于调试 -->
         <div style="margin-top: 10px">
-          <FilesAll/>
-
+          <FilesAll v-if="buttons.allFiles"/>
+          <FilesDocs v-if="buttons.docs"/>
         </div>
 
       </el-main>
@@ -44,10 +44,11 @@
 
 <script>
 import FilesAll from "./FilesAll";
+import FilesDocs from "./FilesDocs";
 export default {
   name: "MajorMenuFiles",
   components:{
-    FilesAll
+    FilesAll,FilesDocs
   },
   data() {
     return {
