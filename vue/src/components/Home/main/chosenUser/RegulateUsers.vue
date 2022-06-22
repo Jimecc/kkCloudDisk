@@ -18,9 +18,9 @@
           </div>
           <div class="infoInCard">
             <div>用户名：{{userInfo.username}}</div>
-            <div>简介：{{userInfo.userInfo}}</div>
+            <div>简&emsp;介：{{userInfo.userInfo}}</div>
             <div>
-              启用状态：
+              启&emsp;用：
               <el-switch
                   v-model="userInfo.enabled"
                   active-color="#13ce66"

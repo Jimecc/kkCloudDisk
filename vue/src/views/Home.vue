@@ -60,8 +60,10 @@
           </el-aside>
           <el-main class="elMain">
             <div style="margin-top: 10px">
-              <RegulateUsers/>
+<!--              <RegulateUsers/>-->
+              <RecentlyShare/>
             </div>
+
 <!--            <AllFiles v-if="this.buttons.allFiles"/>-->
 <!--            <Bin v-if="this.buttons.bin"/>-->
 
@@ -82,12 +84,14 @@ import ChosenUser from "../components/Home/aside/ChosenUser";
 import AllFiles from "../components/Home/main/chosenFiles/AllFiles";
 import Bin from "../components/Home/main/chosenFiles/Bin";
 import RegulateUsers from "../components/Home/main/chosenUser/RegulateUsers";
+import RecentlyShare from "../components/Home/main/chosenTr/RecentlyShare";
   export default {
     name: "Home",
     components:{
       // ChosenFiles,
       ChosenTr,ChosenUser,
       AllFiles,Bin,
+      RecentlyShare,
       RegulateUsers
     },
     data(){
