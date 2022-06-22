@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <div>
       <div class="divButtonUpload">
@@ -26,18 +27,18 @@
     <div style="display: flex;width:100%">
 
       <div style="width: 100%">
-          <div class="divFiles" >
-            <div class="divIconFile"  v-for="i in 20" :key="i">
-              <el-card class="elCardFile" shadow="hover">
-                <img class="imgFile" src="../../../../assets/fileIcons/yellowfile.png">
-                <el-button type="text" class="buttonFileName">{{i*100000}}</el-button>
-                <div class="fileInfo">
-                  <span>id:{{i}}</span><br>
-                  <span>{{ currentDay }}</span>
-                </div>
-              </el-card>
-            </div>
+        <div class="divFiles" >
+          <div class="divIconFile"  v-for="i in 20" :key="i">
+            <el-card class="elCardFile" shadow="hover">
+              <img class="imgFile" src="../../../assets/fileIcons/yellowfile.png">
+              <el-button type="text" class="buttonFileName">{{i*100000}}</el-button>
+              <div class="fileInfo">
+                <span>id:{{i}}</span><br>
+                <span>{{ currentDay }}</span>
+              </div>
+            </el-card>
           </div>
+        </div>
       </div>
       <div class="fileBriefIntro">
         <div style="padding: 10px 10px">
@@ -53,14 +54,9 @@
 </template>
 
 <script>
-  export default {
-    name: "AllFiles",
-    data(){
-      return{
-        currentDay:new Date()
-      }
-    }
-  }
+export default {
+name: ""
+}
 </script>
 
 <style scoped>
