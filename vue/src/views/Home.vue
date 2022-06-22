@@ -5,31 +5,32 @@
 
       <el-header class="elHeader">
         <img src="../assets/logoWord.png" class="imgLogo">
-        <el-popover class="placeAvatar"
-            placement="bottom"
-            width="150"
-            trigger="click"
-            v-model="vis">
-          <img src="../assets/avatar.jpeg"  slot="reference" class="imgAvatar" >
-          <div style="text-align: left;margin-top: 12px">
-            <div style="text-align: center">
-              <h3>{{userinfo.nickname}}</h3>
-            </div>
-            <el-divider style="padding: 0px 0px"></el-divider>
-            <div>
-              <el-button type="text">个人中心</el-button>
-            </div>
-            <div>
-              <el-button type="text">修改密码</el-button>
-            </div>
-            <div>
-              <el-button type="text">退出登录</el-button>
-            </div>
-            <div>
-              <el-button type="text">设置</el-button>
-            </div>
-          </div>
-        </el-popover>
+            <el-popover class="placeAvatar"
+                placement="bottom"
+                width="150"
+                trigger="click"
+                v-model="vis">
+              <img src="../assets/avatar.jpeg"  slot="reference" class="imgAvatar" >
+              <div style="text-align: left;margin-top: 12px">
+                <div style="text-align: center">
+                  <h3>{{userinfo.nickname}}</h3>
+                </div>
+                <el-divider style="padding: 2px 0px"></el-divider>
+                <div>
+                  <el-button type="text" style="font-size:13px;color:#a5a5a5;padding: 2px 2px">个人中心</el-button>
+                </div>
+                <div>
+                  <el-button type="text" style="font-size:13px;color:#a5a5a5;margin:2px 2px;padding: 2px 2px">修改密码</el-button>
+                </div>
+                <div>
+                  <el-button type="text" style="font-size:13px;color:#a5a5a5;padding: 2px 2px">设置</el-button>
+                </div>
+                <div>
+                  <el-button type="text" style="font-size:13px;color:#a5a5a5;padding: 2px 2px" @click="logout">退出登录</el-button>
+                </div>
+
+              </div>
+            </el-popover>
         <span  class="headerUserInfoUsername">{{userinfo.nickname}}</span>
         <el-divider direction="vertical"></el-divider>
         <el-button style="font-size: 16px;color:gray;font-weight: bold;margin-left: 10px" type="text" icon="el-icon-sort"></el-button>
@@ -86,9 +87,11 @@
 <!--            </div>-->
           </el-aside>
           <el-main class="elMain">
+            <!-- 以下 Div 目前仅用于调试 -->
             <div style="margin-top: 10px">
+              <AllFiles/>
 <!--              <RegulateUsers/>-->
-              <RecentlyShare/>
+<!--              <RecentlyShare/>-->
             </div>
 
 <!--            <AllFiles v-if="this.buttons.allFiles"/>-->
@@ -236,9 +239,9 @@ import RecentlyShare from "../components/Home/main/chosenTr/RecentlyShare";
   margin-top: 2px;
 }
 .imgAvatar{
-  width: 30px;
+  width: 32px;
   border-radius: 80px;
-  padding: 1px;
+  padding: 2px;
   border: 1px solid #1e90ff;
 
 }
