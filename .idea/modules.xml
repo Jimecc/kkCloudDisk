@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/kkCloudDisk.iml" filepath="$PROJECT_DIR$/.idea/kkCloudDisk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kkcd/kkcd.iml" filepath="$PROJECT_DIR$/kkcd/kkcd.iml" />
     </modules>
   </component>
 </project>

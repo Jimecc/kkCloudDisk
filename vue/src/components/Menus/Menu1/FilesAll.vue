@@ -23,33 +23,21 @@
 
 
     <div style="display: flex;width:100%">
-
-      <div style="width: 100%;background: #666666">
         <div class="divFiles" >
-          <div style="height: 800px">
-            <div>
-              <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto">
-                <li v-for="i in count" class="infinite-list-item">{{ i }}</li>
-              </ul>
-            </div>
+          <div class="divIconFile"  v-for="i in 20" :key="i">
+            <el-card class="elCardFile" shadow="hover">
+              <img class="imgFile" src="../../../assets/fileIcons/yellowfile.png">
+              <div>
+
+              </div>
+              <span type="text" class="buttonFileName">{{i*10}}</span>
+              <div class="fileInfo">
+                <el-button type="text" icon="el-icon-view" style="color:#cdcdcd"></el-button><br>
+                <span>{{ currentDay }}</span>
+              </div>
+            </el-card>
           </div>
-<!--          <div class="divIconFile"  v-for="i in 20" :key="i">-->
-<!--            <el-card class="elCardFile" shadow="hover">-->
-<!--              <img class="imgFile" src="../../../assets/fileIcons/yellowfile.png">-->
-<!--              <el-button type="text" class="buttonFileName">{{i*100000}}</el-button>-->
-<!--              <div class="fileInfo">-->
-<!--                <span>id:{{i}}</span><br>-->
-<!--                <span>{{ currentDay }}</span>-->
-<!--              </div>-->
-<!--            </el-card>-->
-<!--          </div>-->
         </div>
-      </div>
-      <div class="fileBriefIntro">
-        <div style="padding: 10px 10px">
-          <h1>title</h1>
-        </div>
-      </div>
 
     </div>
 
@@ -59,19 +47,12 @@
 </template>
 
 <script>
-  export default {
-    name: "FilesAll",
-    data(){
-      return{
-        count:0
-        }
-      },
-    methods: {
-      load() {
-        this.count += 2
-      }
-    }
+export default {
+name: "FilesAll",
+  methods:{
+
   }
+}
 </script>
 
 <style scoped>

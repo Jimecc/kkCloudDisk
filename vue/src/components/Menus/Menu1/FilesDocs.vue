@@ -38,11 +38,11 @@
           </div>
         </div>
       </div>
-      <div class="fileBriefIntro">
-        <div style="padding: 10px 10px">
-          <h1>title</h1>
-        </div>
-      </div>
+<!--      <div class="fileBriefIntro">-->
+<!--        <div style="padding: 10px 10px">-->
+<!--          <h1>title</h1>-->
+<!--        </div>-->
+<!--      </div>-->
 
     </div>
 
