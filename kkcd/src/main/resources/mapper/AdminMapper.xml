@@ -20,4 +20,8 @@
         id, nickname, username, password, phone, email, userface, status, role
     </sql>
 
+    <select id="getById" parameterType="Integer" resultType="com.jim.kkcd.entity.Admin">
+        select * from t_admin where id=#{id};
+    </select>
+
 </mapper>
