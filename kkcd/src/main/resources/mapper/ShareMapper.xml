@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jim.kkcd.mapper.ShareMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jim.kkcd.entity.Share">
+        <id column="id" property="id" />
+        <result column="fileId" property="fileId" />
+        <result column="createTime" property="createTime" />
+        <result column="updateTime" property="updateTime" />
+        <result column="disabledDays" property="disabledDays" />
+        <result column="disabledTime" property="disabledTime" />
+        <result column="downloadAddress" property="downloadAddress" />
+        <result column="status" property="status" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, fileId, createTime, updateTime, disabledDays, disabledTime, downloadAddress, status, deleted
+    </sql>
+
+</mapper>

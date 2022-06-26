@@ -48,9 +48,11 @@
 
 <script>
 export default {
-name: "FilesAll",
-  methods:{
-
+  name: "FilesAll",
+  data(){
+    return{
+        currentDay:new Date()
+      }
   }
 }
 </script>

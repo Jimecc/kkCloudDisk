@@ -12,9 +12,14 @@
         <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto">
           <li v-for="i in count" class="infinite-list-item">
             <el-card class="shareInfo">
-          <span style="width: 35px;">
-            {{i}}
-          </span>
+
+              <span style="width: 35px;">
+                {{i}}
+              </span>
+              <el-divider direction="vertical"></el-divider>
+
+              <el-checkbox v-model="checked"></el-checkbox>
+
               <el-divider direction="vertical"></el-divider>
               <el-button type="text" style="color: #484848" icon="el-icon-copy-document"></el-button>
               <el-divider direction="vertical"></el-divider>
@@ -33,6 +38,13 @@
                   </div>
                 </div>
               </el-popover>
+              <el-divider direction="vertical"></el-divider>
+              <el-switch
+                  size="small"
+                  v-model="value"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949">
+              </el-switch>
 
               <!--                <el-button type="text" style="color: #484848" icon="el-icon-view"></el-button>-->
               <el-divider direction="vertical"></el-divider>
@@ -68,7 +80,8 @@ export default {
     return{
       value:true,
       count: 0,
-      title:'avarar.png'
+      title:'avarar.png',
+      checked: false
     }
   },
   methods:{
